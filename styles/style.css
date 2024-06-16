@@ -1,1 +1,160 @@
+/*start: login style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background-color: gray;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  max-width: 500px;
+  height: auto;
+  background: lightgray;
+  margin: 7% auto auto;
+  padding: 3rem;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form input {
+  display: inline-block;
+  margin: 8px;
+  width: calc(100% - 36px);
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+  font-size: 20px;
+  padding-left: 8px;
+  position: relative;
+}
+
+form i {
+  position: absolute;
+  margin-left: -35px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button.rounded {
+  margin-top: 12px;
+  width: 100%;
+  background: gray;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+button.rounded:hover {
+  background: #000;
+}
+
+form p {
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+
+form p a {
+  color: #0000ff;
+}
+
+hr {
+  width: 100%;
+  margin: 20px 0;
+}
+
+button.register {
+  width: 100%;
+  height: 35px;
+  margin: 20px 0;
+  padding: 2px;
+  background: gray;
+  color: #000;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button.register:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  form input,
+  form button,
+  hr {
+    width: 100%;
+  }
+
+  form button,
+  button.register {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  form p {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body{
+    background-color: #d3d3d3;
+  }
+  form {
+    padding: 1rem;
+  }
+
+  form input,
+  form button,
+  hr {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  form button {
+    width: 100%;
+    margin: 10px 0;
+    background: #000;
+  }
+  button.register{
+    width: 100%;
+      margin: 10px 0;
+      background: #000;
+      color: #fff;
+  }
+
+  form p {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  form h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/*end: login style */
