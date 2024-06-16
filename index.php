@@ -5,9 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Catch-Up Buddy</title>
-  <!-- Favicon for the website -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Login</title>
 
   <!-- Link to the main stylesheet and Font Awesome icons -->
   <link rel="stylesheet" href="styles/style.css" />
@@ -17,7 +15,7 @@
 <body>
   <!-- Login form -->
   <form action="includes/login.inc.php" method="post">
-    <h1>My Catch-Up Buddy.</h1>
+    <h1>Login.</h1>
     <!-- PHP block to display error messages if any -->
     <?php
     if (isset($_GET['error'])) {
