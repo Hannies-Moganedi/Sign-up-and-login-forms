@@ -12,8 +12,8 @@ if (isset($_POST['login-submit'])) {
     // Encode the username for use in query parameters
     $queryParams = "username=" . urlencode($mailuid);
 
-    // Prepare SQL statement to select the user by email or username
-    $sql = "SELECT * FROM users WHERE EmailAddress=? OR typeUser=?;";
+    // Prepare SQL statement to select the user by email
+    $sql = "SELECT * FROM users WHERE EmailAddress=?";
     $stmt = mysqli_stmt_init($conn);
     
     // Check if the SQL statement preparation fails
@@ -39,14 +39,8 @@ if (isset($_POST['login-submit'])) {
                 header("Location: ../INDEX?error=wrongpassword&" . $queryParams);
                 exit();
             } elseif ($pwdCheck == true) {
-                // Start a new session and set session variables
-                session_start();
-                $_SESSION['userName'] = $row['EmailAddress'];
-                $_SESSION['pupil'] = $row['FirstName'];                    
-                $_SESSION['last_login_timestamp'] = time();
-
-                // Redirect to the grade page
-                header("Location: ../Grade");
+                // Redirect to the welcome page
+                header("Location: ../welcome.html?login=success");
                 exit();
             } else {
                 // Redirect to the login page with a wrong password error
